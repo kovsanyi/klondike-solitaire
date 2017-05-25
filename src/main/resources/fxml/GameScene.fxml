@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="660.0" prefWidth="780.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hu.unideb.inf.klondike.GameForm">
+   <children>
+      <MenuBar prefHeight="29.0" prefWidth="780.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="New">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#newGame" text="New Game" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Load">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#loadGame" text="Load Game" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Save">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#saveGame" text="Save Game" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Undo">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#undo" text="Undo Move" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Exit">
+              <items>
+                <MenuItem mnemonicParsing="false" onAction="#exit" text="Exit App" />
+              </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView fx:id="deck" fitHeight="136.0" fitWidth="100.0" layoutX="10.0" layoutY="39.0" onMousePressed="#stockOnMousePressed" pickOnBounds="true" preserveRatio="true" />
+      <Pane fx:id="reserveDeck" layoutX="120.0" layoutY="38.0" prefHeight="136.0" prefWidth="150.0" />
+      <Pane fx:id="tableauPile1" layoutX="10.0" layoutY="185.0" prefHeight="440.0" prefWidth="100.0" />
+      <Pane fx:id="tableauPile2" layoutX="120.0" layoutY="185.0" prefHeight="440.0" prefWidth="100.0" />
+      <Pane fx:id="tableauPile3" layoutX="230.0" layoutY="185.0" prefHeight="440.0" prefWidth="100.0" />
+      <Pane fx:id="tableauPile4" layoutX="340.0" layoutY="185.0" prefHeight="440.0" prefWidth="100.0" />
+      <Pane fx:id="tableauPile5" layoutX="450.0" layoutY="185.0" prefHeight="440.0" prefWidth="100.0" />
+      <Pane fx:id="tableauPile6" layoutX="560.0" layoutY="185.0" prefHeight="440.0" prefWidth="100.0" />
+      <Pane fx:id="tableauPile7" layoutX="670.0" layoutY="185.0" prefHeight="440.0" prefWidth="100.0" />
+      <Pane fx:id="foundations" layoutX="340.0" layoutY="39.0" prefHeight="136.0" prefWidth="430.0" />
+      <Label fx:id="score" layoutX="10.0" layoutY="634.0" text="Score: 0" />
+      <Label fx:id="moves" layoutX="100.0" layoutY="634.0" text="Moves: 0" />
+      <Label fx:id="lblYouWon" disable="true" layoutX="102.0" layoutY="360.0" text="YOU WON!" visible="false">
+         <font>
+            <Font name="System Bold" size="96.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCongratulations" disable="true" layoutX="26.0" layoutY="260.0" text="Congratulations!" visible="false">
+         <font>
+            <Font size="87.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
