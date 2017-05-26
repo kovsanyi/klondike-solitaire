@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 /**
- * Provides classes for string and viewing the game and contains the exception classes.
+ * Provides classes for storing and viewing the game and contains the exception classes.
  */
 package hu.unideb.inf.klondike;

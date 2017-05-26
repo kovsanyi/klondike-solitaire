@@ -397,7 +397,7 @@ public class Game {
             foundationPiles[i] = new Foundation();
         }
         
-        talon = new Talon(cards.subList(cardPointer, cards.size() - 1));
+        talon = new Talon(cards.subList(cardPointer, cards.size()));
         
         logger.info("A new game started.");
     }

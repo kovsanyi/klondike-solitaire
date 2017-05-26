@@ -50,7 +50,7 @@ import org.slf4j.LoggerFactory;
  */
 public class Foundation {
 
-    static Logger logger = LoggerFactory.getLogger(Foundation.class);
+    private final static Logger logger = LoggerFactory.getLogger(Foundation.class);
 
     private List<Card> storedCards;
     private Card erasureBuffer;

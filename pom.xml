@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>hu.unideb.inf</groupId>
     <artifactId>klondike-solitaire</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>Klondike</name>
     <packaging>jar</packaging>
     <licenses>

@@ -56,21 +56,9 @@ public class Card implements Comparable<Card> {
      * Enum for representing the foundation of the {@code Card}.
      */
     public static enum FOUNDATION {
-        /**
-         * Heart
-         */
         HEART,
-        /**
-         * Diamond
-         */
         DIAMOND,
-        /**
-         * Spade
-         */
         SPADE,
-        /**
-         * Club
-         */
         CLUB
     }
 
@@ -78,57 +66,18 @@ public class Card implements Comparable<Card> {
      * Enum for representing the rank of the {@code Card}.
      */
     public static enum RANK {
-        /**
-         * Ace
-         */
         ACE,
-        /**
-         * 2
-         */
         TWO,
-        /**
-         * 3
-         */
         THREE,
-        /**
-         * 4
-         */
         FOUR,
-        /**
-         * 5
-         */
         FIVE,
-        /**
-         * 6
-         */
         SIX,
-        /**
-         * 7
-         */
         SEVEN,
-        /**
-         * 8
-         */
         EIGHT,
-        /**
-         * 9
-         */
         NINE,
-        /**
-         * 10
-         */
         TEN,
-        /**
-         * Jack
-         */
         JACK,
-        /**
-         * Queen
-         */
         QUEEN,
-        /**
-         * King
-         */
         KING
     }
 
@@ -137,11 +86,11 @@ public class Card implements Comparable<Card> {
      */
     public static enum COLOR {
         /**
-         * Red such as <i>Heart</i> or <i>Diamond</i>
+         * Red such as <i>Heart</i> or <i>Diamond</i>.
          */
         RED,
         /**
-         * Black such as <i>Spade</i> or <i>Club</i>
+         * Black such as <i>Spade</i> or <i>Club</i>.
          */
         BLACK
     }
@@ -151,11 +100,11 @@ public class Card implements Comparable<Card> {
      */
     public static enum STATE {
         /**
-         * When the {@code Card} is visible
+         * When the {@code Card} is visible.
          */
         UPSIDE,
         /**
-         * When the {@code Card} is not visible
+         * When the {@code Card} is not visible.
          */
         DOWNSIDE
     }
