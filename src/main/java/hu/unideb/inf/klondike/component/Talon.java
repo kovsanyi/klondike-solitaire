@@ -97,7 +97,7 @@ public class Talon {
         prevState.add(new State(pointer, available, 'n'));
         if (erasureBuffer != null) {
             erasureBuffer = null;
-            logger.warn("cardToRemove's value had not been null when the next() function was called! Now, it's value is null.");
+            logger.warn("Erasure buffer had not been empty when the next() function was called! Cleared.");
         }
         if (storedCards.size() > 3 && pointer == 0 && available == 0) {
             available = 3;

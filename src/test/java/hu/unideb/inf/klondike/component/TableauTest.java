@@ -20,6 +20,7 @@ import hu.unideb.inf.klondike.OffenseWhileAddingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import org.hamcrest.core.Is;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -66,6 +67,18 @@ public class TableauTest {
     @Test
     public void testAdd() {
         Card.RANK ranks[] = Card.RANK.values();
+        for (int i = 0; i < ranks.length; i++) {
+            if (ranks[i] == Card.RANK.KING) {
+                continue;
+            }
+            Card card = new Card(Card.FOUNDATION.CLUB, ranks[i]);
+            try {
+                instance.add(Arrays.asList(card));
+                fail("Expected an OffenseWhileAddingException to be thrown!");
+            } catch (OffenseWhileAddingException ex) {
+                assertThat(ex.getMessage(), Is.is(card.toString() + " is not a King!"));
+            }
+        }
         for (int i = ranks.length - 1; i >= 0; i--) {
             try {
                 instance.add(new ArrayList<>(Arrays.asList(new Card(i % 2 == 0 ? Card.FOUNDATION.CLUB : Card.FOUNDATION.HEART, ranks[i]))));
